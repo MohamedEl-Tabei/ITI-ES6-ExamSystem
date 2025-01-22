@@ -1,3 +1,8 @@
+:root {
+  --main: #24288a;
+  --main-hover: #1d1f6b;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -11,4 +16,54 @@
   background-repeat: no-repeat;
   height: 100vh;
   background-color: #c0e4f6;
+}
+
+.btn-primary {
+  background-color: var(--main);
+  border-color: var(--main);
+}
+.btn-primary:hover {
+  background-color: var(--main-hover);
+}
+.btn-primary:disabled {
+  opacity: 0.8;
+  border-color: var(--main);
+  background-color: var(--main);
+}
+.invalid-feedback {
+  min-height: 21px;
+  margin: 0px;
+}
+.invalid-feedback::first-letter {
+  text-transform: uppercase;
+}
+.form-control:focus {
+  border-color: #c0e4f6;
+  box-shadow: 0 0 0 0.25rem rgb(192 228 246 / 42%);
+}
+#password-eye,
+#cpassword-eye {
+  background-color: #ffffff;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  color: #595c5f;
+  cursor: pointer;
+  transition-duration: 1s;
+  transform: scale(0.9);
+}
+#password-eye:hover,
+#cpassword-eye:hover {
+  transform: scale(1);
+}
+h3 div {
+  opacity: 0.5;
+  cursor: pointer;
+}
+h3 div img {
+  filter: hue-rotate(100deg);
+}
+.open {
+  opacity: 1;
 }
