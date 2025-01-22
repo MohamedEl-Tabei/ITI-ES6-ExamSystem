@@ -1,7 +1,99 @@
 <div class="grid d-flex" style="display: none">
   <div class="d-none d-md-flex col-md-5 register-cover shadow"></div>
+  <form class="d-flex flex-column col p-4 needs-validation gap-2" novalidate>
+    <!-- First Name -->
+    <h3 class="mb-3 d-flex gap-5">
+      <div class="d-flex flex-column opacity-1 open">
+        Sign up <img class="mt-1" src="/svg/underline.svg" />
+      </div>
 
-  <button id="dd">Login</button>
+      <div id="toLogin">Log in</div>
+    </h3>
+    <div>
+      <label for="exampleInputFName1" class="form-label mb-1">First Name</label>
+      <input
+        type="text"
+        class="form-control rounded-0"
+        id="exampleInputFName1"
+        placeholder="example"
+      />
+      <small class="invalid-feedback d-flex"></small>
+    </div>
+    <!-- Last Name -->
+    <div>
+      <label for="exampleInputLName1" class="form-label mb-1">Last Name</label>
+      <input
+        type="text"
+        class="form-control rounded-0"
+        id="exampleInputLName1"
+        placeholder="example"
+      />
+      <small class="invalid-feedback d-flex"></small>
+    </div>
+    <!-- Email -->
+    <div>
+      <label for="exampleInputEmail1" class="form-label mb-1">Email</label>
+      <input
+        type="email"
+        class="form-control rounded-0"
+        id="exampleInputEmail1"
+        placeholder="example@test.com"
+      />
+      <small class="invalid-feedback d-flex"></small>
+    </div>
+    <!-- Password  -->
+    <div>
+      <label for="exampleInputPassword1" class="form-label mb-1"
+        >Password</label
+      >
+      <div class="position-relative">
+        <input
+          type="password"
+          class="form-control rounded-0"
+          id="exampleInputPassword1"
+          placeholder="••••••••"
+        />
+        <i
+          class="fa-solid fa-eye-slash position-absolute"
+          id="password-eye"
+        ></i>
+        <small class="invalid-feedback d-flex"></small>
+      </div>
+    </div>
+
+    <!-- Confirm Password -->
+    <div>
+      <label for="exampleInputcPassword1" class="form-label mb-1"
+        >Confirm Password</label
+      >
+      <div class="position-relative">
+        <input
+          type="password"
+          class="form-control rounded-0"
+          id="exampleInputcPassword1"
+          placeholder="••••••••"
+        />
+        <i
+          class="fa-solid fa-eye-slash position-absolute"
+          id="cpassword-eye"
+        ></i>
+        <small class="invalid-feedback d-flex"></small>
+      </div>
+    </div>
+    <!-- Submit Button  -->
+    <button
+      type="submit"
+      class="btn btn-primary rounded-0 pt-2 pb-2"
+      id="submitBtn"
+      disabled
+    >
+      Sign Up
+    </button>
+  </form>
+  <script src="utilities/JQuery.js"></script>
+  <script src="utilities/bootstrap.min.js"></script>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="authentication/signup.js"></script>
   <!-- No More -->
   <script>
     sessionStorage.setItem("viewName", "_signup");

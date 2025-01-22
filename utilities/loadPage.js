@@ -11,9 +11,6 @@ async function loadPage(viewName) {
   await $("#root").html(
     innerHtml.slice(0, innerHtml.indexOf("<!-- No More -->"))
   );
-  $(`#${viewName}`).show();
-
-  $("#dd").on("click", () => loadPage("_login"));
 }
 
 export default loadPage;

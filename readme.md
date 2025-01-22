@@ -5,6 +5,7 @@ A JavaScript-based examination system project can efficiently manage and conduct
 ## Features
 
 - Single Page Application
+- OOP
 
 ## Technologies
 
