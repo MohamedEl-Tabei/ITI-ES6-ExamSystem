@@ -1,6 +1,5 @@
 :root {
-  --main: #24288a;
-  --main-hover: #1d1f6b;
+  --main: #264968;
 }
 
 * {
@@ -10,20 +9,29 @@
 }
 
 .register-cover {
-  background-image: url("https://i.ibb.co/GnxbCn3/main.png");
+  background-image: url("/svg/cover.svg"), url("/svg/cover2.svg");
   background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  filter: drop-shadow(-10px 0px 6px black);
+  background-size: contain, cover;
+  background-repeat: no-repeat, repeat;
   height: 100vh;
-  background-color: #c0e4f6;
+  background-color: #fffaee;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-primary :focus {
+  background-color: var(--main);
+  border-color: var(--main);
+  opacity: 0.95;
+}
+.btn-primary:hover {
+  opacity: 1;
   background-color: var(--main);
   border-color: var(--main);
 }
-.btn-primary:hover {
-  background-color: var(--main-hover);
+.btn-primary:active {
+  background-color: var(--main) !important;
+  border-color: var(--main) !important;
 }
 .btn-primary:disabled {
   opacity: 0.8;
@@ -38,8 +46,8 @@
   text-transform: uppercase;
 }
 .form-control:focus {
-  border-color: #c0e4f6;
-  box-shadow: 0 0 0 0.25rem rgb(192 228 246 / 42%);
+  border-color: #c0e4f600;
+  box-shadow: 0 0 0 0.25rem #22566714;
 }
 #password-eye,
 #cpassword-eye {
@@ -66,4 +74,16 @@ h3 div img {
 }
 .open {
   opacity: 1;
+}
+.logo {
+  height: max-content;
+  margin: 10px auto;
+  padding: 10px;
+  color: var(--main);
+  font-family: Atma;
+  font-weight: bold;
+}
+@font-face {
+  font-family: Atma;
+  src: url("/fonts/Atma-Regular.ttf");
 }
