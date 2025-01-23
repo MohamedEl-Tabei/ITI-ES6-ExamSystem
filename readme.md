@@ -19,4 +19,4 @@ A JavaScript-based examination system project can efficiently manage and conduct
 
 ## Demo
 
-https://iti-es-6-exam-system.vercel.app
+Explore the live demo here: [Exam System Demo](https://iti-es-6-exam-system.vercel.app)
