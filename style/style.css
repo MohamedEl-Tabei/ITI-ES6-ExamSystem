@@ -10,7 +10,7 @@
 
 .register-cover {
   background-image: url("/svg/cover.svg"), url("/svg/cover2.svg");
-  background-position: center;
+  background-position: bottom;
   filter: drop-shadow(-10px 0px 6px black);
   background-size: contain, cover;
   background-repeat: no-repeat, repeat;
