@@ -1,16 +1,16 @@
-<div class="grid d-flex" style="display: none">
+<div class="grid d-flex d-none" style="display: none" id="_signup">
   <div class="d-none d-md-flex col-md-6 register-cover shadow">
     <h1 class="logo">Online Test</h1>
   </div>
   <form class="d-flex flex-column col p-4 needs-validation gap-2" novalidate>
-    <!-- First Name -->
     <h3 class="mb-3 d-flex gap-5">
-      <div class="d-flex flex-column opacity-1 open">
+      <div class="d-flex flex-column opacity-1 open text-center">
         Sign up <img class="mt-1" src="/svg/underline.svg" />
       </div>
 
-      <div id="toLogin">Log in</div>
+      <div id="toLogin" class="text-center">Log in</div>
     </h3>
+    <!-- First Name -->
     <div>
       <label for="exampleInputFName1" class="form-label mb-1">First Name</label>
       <input
@@ -56,7 +56,7 @@
           placeholder="••••••••"
         />
         <i
-          class="fa-solid fa-eye-slash position-absolute"
+          class="fa-solid fa-eye-slash position-absolute eye"
           id="password-eye"
         ></i>
         <small class="invalid-feedback d-flex"></small>
@@ -76,7 +76,7 @@
           placeholder="••••••••"
         />
         <i
-          class="fa-solid fa-eye-slash position-absolute"
+          class="fa-solid fa-eye-slash position-absolute eye"
           id="cpassword-eye"
         ></i>
         <small class="invalid-feedback d-flex"></small>
@@ -89,13 +89,9 @@
       id="submitBtn"
       disabled
     >
-      Sign Up
+      Sign up
     </button>
   </form>
-  <script src="utilities/JQuery.js"></script>
-  <script src="utilities/bootstrap.min.js"></script>
-  <script type="module" src="script.js"></script>
-  <script type="module" src="authentication/signup.js"></script>
   <!-- No More -->
   <script>
     sessionStorage.setItem("viewName", "_signup");

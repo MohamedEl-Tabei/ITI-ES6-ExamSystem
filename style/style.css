@@ -1,5 +1,7 @@
 :root {
   --main: #264968;
+  --main2: #6a7886;
+  --main3: #fbe56d;
 }
 
 * {
@@ -49,8 +51,7 @@
   border-color: #c0e4f600;
   box-shadow: 0 0 0 0.25rem #22566714;
 }
-#password-eye,
-#cpassword-eye {
+.eye {
   background-color: #ffffff;
   width: 20px;
   height: 20px;
@@ -61,8 +62,7 @@
   transition-duration: 1s;
   transform: scale(0.9);
 }
-#password-eye:hover,
-#cpassword-eye:hover {
+.eye {
   transform: scale(1);
 }
 h3 div {
@@ -82,6 +82,39 @@ h3 div img {
   color: var(--main);
   font-family: Atma;
   font-weight: bold;
+}
+.ff-atma {
+  font-family: Atma;
+}
+.text-o {
+  color: var(--main2);
+}
+.ready {
+  background-image: url("/svg/cover2.svg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.ready button {
+  font-size: large;
+  width: max-content;
+  color: var(--main3);
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+.ready button:hover {
+  color: var(--main3);
+  transform: scale(1.1);
+}
+.ready-img {
+  background-image: url("../svg/ready.svg");
+  height: 50vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
 }
 @font-face {
   font-family: Atma;
