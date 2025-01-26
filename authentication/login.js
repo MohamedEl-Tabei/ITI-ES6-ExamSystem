@@ -10,6 +10,8 @@ const Login = () => {
     toSignup: document.getElementById("toSignup"),
     invalidEmailorPass: document.getElementById("invalidEmailorPass"),
     toSuccess : document.getElementById("toSuccess"),
+    toFail : document.getElementById("toFail"),
+ // Testing Success and fail pages
   };
   const user = new User();
   // Handlers
@@ -68,8 +70,10 @@ const Login = () => {
       selectors.submitBtn.disabled = true;
     }
   }
-
+ // Testing Success and fail pages
   toSuccess.disabled =false;
+  toFail.disabled =false;
+
   selectors.emailInput.addEventListener("input", onInputHandler);
   
   selectors.password.addEventListener("input", onInputHandler);
@@ -81,8 +85,13 @@ const Login = () => {
   selectors.toSignup.addEventListener("click", () => {
     goTo("_signup");
   });
+
+  // Testing Success and fail pages
   selectors.toSuccess.addEventListener("click", () =>{
      goTo("_success");
     });
+    selectors.toFail.addEventListener("click", () =>{
+      goTo("_fail");
+     });
 };
 export default Login;
