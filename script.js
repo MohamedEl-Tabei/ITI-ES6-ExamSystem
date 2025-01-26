@@ -18,8 +18,7 @@ import Fail from "./controllers/fail.js";
   // to add events after load the pages
   Signup();
   Login();
-  $(".logout").on("click", () => goTo("_ready"));
-  // $(".logout").on("click", () => goTo("_signup"));
+  $(".logout").on("click", () => goTo("_signup"));
   $("#_ready .start").on("click", async () => {
     //get mcqs from server
     goTo("_exam");

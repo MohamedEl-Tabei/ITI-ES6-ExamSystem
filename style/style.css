@@ -161,7 +161,8 @@ h3 div img {
 .error {
   background-image: url("../images/error.jpg");
   height: 100vh;
-.success-img{
+}
+.success-img {
   background-image: url("/svg/Success.svg");
   height: 50vh;
   background-size: contain;
@@ -174,7 +175,6 @@ h3 div img {
   color: var(--main3);
   transform: scale(1.1);
 }
-
 
 .success button {
   font-size: large;
@@ -193,7 +193,7 @@ h3 div img {
   height: 100vh;
 }
 
-.fail-img{
+.fail-img {
   background-image: url("/svg/Fail.svg");
   height: 50vh;
   background-size: contain;
@@ -228,13 +228,11 @@ h3 div img {
 .text-main {
   color: var(--main);
 }
-}
 
 .fail button:hover {
   color: var(--main);
   transform: scale(1.1);
 }
-
 
 .fail button {
   font-size: large;
