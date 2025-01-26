@@ -1,0 +1,31 @@
+<div
+  class="d-flex flex-column justify-content-center h-100vh"
+  id="_exam"
+  style="display: none"
+>
+  <button
+    class="btn btn-primary d-flex align-items-center rounded-5 logout position ms-auto me-2 position-absolute"
+  >
+    <small
+      >Log out<i class="fa-solid fa-arrow-right-from-bracket ms-2"></i
+    ></small>
+  </button>
+  <div
+    class="container-loader bg-light w-100 position-absolute d-flex justify-content-center align-items-center h-100vh"
+  >
+    <div class="loader"></div>
+  </div>
+  <div class="container h-75 grid d-flex">
+    <div
+      class="container col-10 shadow d-flex flex-column overflow-y-scroll p-3 gap-3"
+      id="examContainer"
+    >
+      <div><h6 id="question"></h6></div>
+    </div>
+    <div class="container col-1 bg-primary text-light shadow">1</div>
+  </div>
+  <!-- No More -->
+  <script>
+    location.pathname = "";
+  </script>
+</div>
