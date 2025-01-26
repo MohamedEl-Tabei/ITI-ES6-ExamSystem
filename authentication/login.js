@@ -9,6 +9,7 @@ const Login = () => {
     submitBtn: document.getElementById("submitBtn2"),
     toSignup: document.getElementById("toSignup"),
     invalidEmailorPass: document.getElementById("invalidEmailorPass"),
+    toSuccess : document.getElementById("toSuccess"),
   };
   const user = new User();
   // Handlers
@@ -68,16 +69,20 @@ const Login = () => {
     }
   }
 
+  toSuccess.disabled =false;
   selectors.emailInput.addEventListener("input", onInputHandler);
-
+  
   selectors.password.addEventListener("input", onInputHandler);
-
+  
   selectors.submitBtn.addEventListener("click", onSubmitHandler);
-
+  
   selectors.passwordEye.addEventListener("click", passwordStateToggle);
-
+  
   selectors.toSignup.addEventListener("click", () => {
     goTo("_signup");
   });
+  selectors.toSuccess.addEventListener("click", () =>{
+     goTo("_success");
+    });
 };
 export default Login;

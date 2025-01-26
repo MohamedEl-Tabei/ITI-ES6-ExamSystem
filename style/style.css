@@ -120,3 +120,34 @@ h3 div img {
   font-family: Atma;
   src: url("/fonts/Atma-Regular.ttf");
 }
+
+.success-img{
+  background-image: url("/svg/Success.svg");
+  height: 50vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.success button:hover {
+  color: var(--main3);
+  transform: scale(1.1);
+}
+
+
+.success button {
+  font-size: large;
+  width: max-content;
+  color: var(--main3);
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+.success {
+  background-image: url("/svg/cover2.svg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
