@@ -161,6 +161,41 @@ h3 div img {
 .error {
   background-image: url("../images/error.jpg");
   height: 100vh;
+.success-img{
+  background-image: url("/svg/Success.svg");
+  height: 50vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.success button:hover {
+  color: var(--main3);
+  transform: scale(1.1);
+}
+
+
+.success button {
+  font-size: large;
+  width: max-content;
+  color: var(--main3);
+  font-weight: 900;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+.success {
+  background-image: url("/svg/cover2.svg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.fail-img{
+  background-image: url("/svg/Fail.svg");
+  height: 50vh;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -192,4 +227,39 @@ h3 div img {
 }
 .text-main {
   color: var(--main);
+}
+}
+
+.fail button:hover {
+  color: var(--main);
+  transform: scale(1.1);
+}
+
+
+.fail button {
+  font-size: large;
+  width: max-content;
+  color: var(--main);
+  font-weight: 900;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+.fail {
+  background-image: url("/svg/123.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-color: #571b1b;
+  color: yellow;
+}
+
+.failo {
+  height: max-content;
+  margin: 10px auto;
+  padding: 10px;
+  color: #ffc107;
+  font-family: Atma;
+  font-weight: bold;
 }
