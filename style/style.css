@@ -353,7 +353,7 @@ h3 div img {
   position: relative;
   z-index: 1;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .shadow {
     box-shadow: none !important;
   }
@@ -420,4 +420,8 @@ h4 {
   90% {
     transform: translateY(-3px) rotate(-10deg);
   }
+}
+
+.myh-fm {
+  min-height: max-content;
 }

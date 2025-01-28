@@ -18,7 +18,7 @@ const Exam = (mcqs) => {
   };
   $(selectors.examContainer).children().remove();
   $(selectors.flags).children().remove();
-  let time = timer(10);
+  let time = timer(180);
   mcqs.forEach((mcq) => {
     new Question(mcq, userAnswers);
   });
@@ -57,6 +57,7 @@ const Exam = (mcqs) => {
       (mcq, i) =>
         (grade = mcq.options[mcq.answer] == userAnswers[i] ? grade + 1 : grade)
     );
+    $(qustionNumber).text(1);
     let percentage = (grade / mcqs.length).toFixed(4) * 100;
     localStorage.setItem("grade", percentage);
     clearInterval(time);

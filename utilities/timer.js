@@ -4,6 +4,7 @@ const timer = (timeInMinutes) => {
   let remainingTime = totalTime;
   const progressBar = document.getElementById("progressBar");
   const minutesDisplay = document.getElementById("minutes");
+  progressBar.classList.remove("bg-danger");
   function updateTimer() {
     let minutes = Math.floor(remainingTime / 60);
     let seconds = remainingTime % 60;
