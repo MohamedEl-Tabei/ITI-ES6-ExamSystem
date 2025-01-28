@@ -3,7 +3,7 @@ class Validation {
     if (!_email.length) throw new Error("Email is required");
     if (!/^[a-zA-Z][a-zA-Z0-9_]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/.test(_email))
       throw new Error("Invalid email");
-    if (localStorage.email == _email)
+    if (localStorage.email == _email.lowerCase())
       throw new Error("This email is already registered.");
   };
   static name = (_name, type) => {
