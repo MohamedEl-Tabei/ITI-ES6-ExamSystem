@@ -6,6 +6,7 @@ A JavaScript-based examination system project can efficiently manage and conduct
 
 - Single Page Application
 - OOP
+- API
 
 ## Technologies
 
@@ -20,3 +21,16 @@ A JavaScript-based examination system project can efficiently manage and conduct
 ## Demo
 
 Explore the live demo here: [Exam System Demo](https://iti-es-6-exam-system.vercel.app)
+
+## Team
+
+- [@Mohamed Elsayed Eltabei](https://github.com/MohamedEl-Tabei)
+- [@Mohamed Abdelsadek](https://github.com/eliaso21)
+
+## Repository
+
+[ITI-ES6-ExamSystem](https://github.com/MohamedEl-Tabei/ITI-ES6-ExamSystem)
+
+## API Repository
+
+[ITI-API-ExamSystem](https://github.com/MohamedEl-Tabei/ITI-API-ExamSystem)

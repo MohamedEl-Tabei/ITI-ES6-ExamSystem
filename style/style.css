@@ -8,6 +8,8 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box !important;
+  transition-duration: 0.5s !important;
+  transition-property: all !important;
 }
 
 .register-cover {
@@ -97,14 +99,14 @@ h3 div img {
   height: 100vh;
 }
 
-.ready button {
+.ready .start {
   font-size: large;
   width: max-content;
   color: var(--main3);
   transition-property: all;
   transition-duration: 0.5s;
 }
-.ready button:hover {
+.ready .start:hover {
   color: var(--main3);
   transform: scale(1.1);
 }
@@ -116,7 +118,310 @@ h3 div img {
   background-repeat: no-repeat;
   width: 100%;
 }
+.logout {
+  top: 10px;
+  right: 10px;
+}
 @font-face {
   font-family: Atma;
   src: url("/fonts/Atma-Regular.ttf");
+}
+
+.loader {
+  width: 25px;
+  height: 25px;
+  box-shadow: 0 30px, 0 -30px;
+  border-radius: 4px;
+  background: currentColor;
+  display: block;
+  margin: -50px auto 0;
+  position: relative;
+  color: var(--main);
+  transform: translateY(30px);
+  box-sizing: border-box;
+  animation: animloader 2s ease infinite;
+}
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  width: 25px;
+  height: 25px;
+  box-shadow: 0 30px, 0 -30px;
+  border-radius: 4px;
+  background: currentColor;
+  color: var(--main);
+  position: absolute;
+  left: 30px;
+  top: 0;
+  animation: animloader 2s 0.2s ease infinite;
+}
+.loader::before {
+  animation-delay: 0.4s;
+  left: 60px;
+}
+.loader::after {
+  right: 60px;
+}
+.error {
+  background-image: url("../images/error.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.success-img {
+  background-image: url("/svg/Success.svg");
+  height: 50vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.success button:hover {
+  color: var(--main3);
+  transform: scale(1.1);
+}
+
+.success button {
+  font-size: large;
+  width: max-content;
+  color: var(--main3);
+  font-weight: 900;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+.success {
+  background-image: url("/svg/cover2.svg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.fail-img {
+  background-image: url("/svg/Fail.svg");
+  height: 50vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  filter: grayscale(1);
+}
+.h-100vh {
+  height: 100vh;
+}
+@keyframes animloader {
+  0% {
+    top: 0;
+    color: var(--main);
+  }
+  50% {
+    top: 6px;
+    color: rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    top: 0;
+    color: var(--main);
+  }
+}
+.bg-primary {
+  background-color: var(--main) !important;
+}
+.selected {
+  background-color: var(--main) !important;
+  color: white;
+}
+.selected:hover {
+  opacity: 1 !important;
+}
+.options {
+  list-style: none;
+}
+.options li {
+  cursor: pointer;
+}
+.options li:hover {
+  background-color: var(--main);
+  color: white;
+  opacity: 0.8;
+}
+.text-main {
+  color: var(--main);
+}
+
+.fail button:hover {
+  color: var(--main);
+  transform: scale(1.1);
+}
+
+.fail button {
+  font-size: large;
+  width: max-content;
+  color: var(--main);
+  font-weight: 900;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+.fail {
+  background-image: url("/svg/123.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-color: #571b1b;
+  color: yellow;
+}
+
+.failo {
+  height: max-content;
+  margin: 10px auto;
+  padding: 10px;
+  color: #ffc107;
+  font-family: Atma;
+  font-weight: bold;
+}
+.flags {
+  background-image: url("/svg/cover2.svg");
+  background-position: -127rem top;
+  background-size: 150rem;
+  background-repeat: no-repeat;
+}
+.flag {
+  top: -10px;
+  right: 0px;
+  text-align: end;
+  font-size: large;
+  cursor: pointer;
+}
+.flag:hover {
+  opacity: 1 !important;
+}
+.btn-flag {
+  height: 30px;
+  width: 30px;
+  box-sizing: border-box;
+  padding: 0px;
+  flex-shrink: 0;
+}
+.progress {
+  height: 5px;
+}
+.submit-test {
+  box-shadow: 0px 6px 0px 0px #1d3347;
+  width: max-content;
+}
+#qustionNumber,
+#numberOfQuestions {
+  display: inline-block;
+  width: 15px;
+}
+.blur {
+  filter: blur(15px);
+}
+.bg-dark-opacity {
+  background-color: #1d33478e;
+}
+.circle {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--bs-danger);
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 65%;
+  background: white;
+  box-shadow: 0px 0px 8px 0px;
+  border-radius: 50%;
+}
+
+.circle span {
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 750px) {
+  .shadow {
+    box-shadow: none !important;
+  }
+  #examContainer {
+    font-size: medium;
+  }
+  .flags {
+    background-image: none;
+    flex-wrap: wrap;
+  }
+  .myw-100 {
+    width: 100% !important;
+  }
+  .myh-fm {
+    height: max-content !important;
+  }
+  h4 {
+    font-size: medium;
+  }
+  .option-h {
+    height: 80px;
+    font-size: small;
+  }
+  .rounded-5 {
+    border-radius: 0px !important;
+  }
+  .time {
+    width: 120px !important;
+  }
+}
+.option-h {
+  height: 100px;
+  box-sizing: border-box;
+  text-align: center;
+}
+h4 {
+  height: 40px;
+}
+/* HTML: <div class="loader"></div> */
+.time {
+  width: 200px;
+  opacity: 0.8;
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  background-image: url("../images/time.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: l9 1s infinite;
+}
+
+@keyframes l9 {
+  0%,
+  70%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  75%,
+  85%,
+  95% {
+    transform: translateY(-3px) rotate(10deg);
+  }
+  80%,
+  90% {
+    transform: translateY(-3px) rotate(-10deg);
+  }
+}
+
+.myh-fm {
+  min-height: max-content;
 }
