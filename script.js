@@ -4,17 +4,18 @@ import getData from "./utilities/getData.js";
 import Signup from "./authentication/signup.js";
 import Login from "./authentication/login.js";
 import Exam from "./controllers/exam.js";
+import Result from "./controllers/result.js";
 (async () => {
   await loadPage("_signup");
   await loadPage("_login");
   await loadPage("_ready");
   await loadPage("_exam");
+  await loadPage("_result");
   goTo(sessionStorage.getItem("page") || "_signup");
   // to add events after load the pages
   Signup();
   Login();
-  $(".logout").on("click", () => goTo("_ready"));
-  // $(".logout").on("click", () => goTo("_signup"));
+  $(".logout").on("click", () => goTo("_signup"));
   $("#_ready .start").on("click", async () => {
     //get mcqs from server
     goTo("_exam");
@@ -25,4 +26,5 @@ import Exam from "./controllers/exam.js";
     const mcqs = await getData();
     Exam(mcqs);
   }
+  Result();
 })();

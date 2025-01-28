@@ -1,28 +1,60 @@
 <div
-  class="d-flex flex-column justify-content-center h-100vh"
+  class="d-flex flex-column justify-content-evenly h-100vh"
   id="_exam"
   style="display: none"
 >
-  <button
-    class="btn btn-primary d-flex align-items-center rounded-5 logout position ms-auto me-2 position-absolute"
-  >
-    <small
-      >Log out<i class="fa-solid fa-arrow-right-from-bracket ms-2"></i
-    ></small>
-  </button>
+  <div class="container">
+    <small id="minutes">0:00 </small>
+    <div class="progress w-100">
+      <div
+        class="progress-bar bg-warning"
+        style="width: 100%"
+        id="progressBar"
+      ></div>
+    </div>
+  </div>
+
   <div
-    class="container-loader bg-light w-100 position-absolute d-flex justify-content-center align-items-center h-100vh"
+    class="container-loader bg-light w-100 position-absolute d-flex justify-content-center align-items-center h-100vh z-3"
   >
     <div class="loader"></div>
   </div>
-  <div class="container h-75 grid d-flex">
+  <div
+    class="container myh-fm h-75 grid d-flex flex-wrap flex-column-reverse flex-md-row justify-content-evenly"
+  >
     <div
-      class="container col-10 shadow d-flex flex-column overflow-y-scroll p-3 gap-3"
-      id="examContainer"
+      class="container col-12 col-md-10 shadow d-flex flex-column justify-content-between p-4 gap-3 m-0"
     >
-      <div><h6 id="question"></h6></div>
+      <div class="h-md-75" id="examContainer"></div>
+
+      <div class="mb-3 d-flex justify-content-center align-items-center gap-5">
+        <button
+          class="btn btn-primary submit-test rounded-5"
+          title="previous"
+          disabled
+        >
+          <i class="fa-solid fa-arrow-left-long"></i>
+        </button>
+        <h6 class="m-0 text-main">
+          <span id="qustionNumber">1</span> out of
+          <span id="numberOfQuestions">6</span>
+        </h6>
+        <button class="btn btn-primary submit-test rounded-5" title="next">
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </button>
+      </div>
+      <button
+        class="container btn btn-primary submit-test col-12 myw-100 ms-0 ms-md-auto me-0"
+        id="submitTest"
+      >
+        Submit test
+      </button>
     </div>
-    <div class="container col-1 bg-primary text-light shadow">1</div>
+
+    <div
+      class="container col-10 col-md-1 shadow flags p-0 text-center d-flex flex-md-column mt-3 m-md-0 gap-3 justify-content-center align-items-center"
+      id="myFlags"
+    ></div>
   </div>
   <!-- No More -->
   <script>
