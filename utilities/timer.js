@@ -1,3 +1,4 @@
+import goTo from "./goTo.js";
 const timer = (timeInMinutes) => {
   let totalTime = timeInMinutes;
   let remainingTime = totalTime;
@@ -20,10 +21,12 @@ const timer = (timeInMinutes) => {
     if (remainingTime > 0) {
       remainingTime--;
     } else {
+      goTo("_timeOut");
       clearInterval(timerInterval);
     }
   }
 
   let timerInterval = setInterval(updateTimer, 1000);
+  return timerInterval;
 };
 export default timer;

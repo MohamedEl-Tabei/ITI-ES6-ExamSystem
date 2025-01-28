@@ -9,7 +9,7 @@ const Result = () => {
   let grade = localStorage.getItem("grade");
   selectors.circle.innerHTML = `<span>${grade}%</span>`;
   selectors.circle.className = "circle";
-  selectors.circle.style.background = `conic-gradient(#00800057  0% ${grade}%,#ff000066 ${grade}% 100%)`;
+
   const newHead = document.getElementById("messageResult");
   newHead.classList.add("text-light");
   newHead.classList.add("bg-dark-opacity");
@@ -19,6 +19,9 @@ const Result = () => {
     grade >= 50
       ? `Excellent work, <span class="text-capitalize">${firstName} ${lastName}</span>!`
       : `<span class="text-capitalize">${firstName} ${lastName}</span>, Be kind to yourself and keep practising!`;
+  $("#circle").css({
+    background: `conic-gradient(#00800057  0% ${grade}%,#ff000066 ${grade}% 100%)`,
+  });
 
   selectors.toReadyf.addEventListener("click", function () {
     localStorage.setItem("grade", "");

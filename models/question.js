@@ -17,12 +17,15 @@ class Question {
       flags: document.getElementById("myFlags"),
       flag: document.createElement("i"),
       flagBtn: document.createElement("button"),
+      qustionNumber: document.getElementById("qustionNumber"),
+      next: "[title='next']",
+      previous: "[title='previous']",
     };
 
     this.#options.forEach((option) => {
       const li = document.createElement("li");
       li.className =
-        "col-12 col-md-5 border p-3 rounded-3 d-flex align-items-center";
+        "col-12 col-md-5 border p-2 justify-content-center rounded-3 d-flex align-items-center option-h";
       li.innerText = option;
       li.addEventListener("click", () =>
         this.#onChoose(count, li, option, userAnswers, selectors.flagBtn)
@@ -49,6 +52,9 @@ class Question {
         .removeClass("d-none")
         .siblings()
         .addClass("d-none");
+      $(selectors.qustionNumber).text(count);
+      $(selectors.next).attr("disabled", count == 10);
+      $(selectors.previous).attr("disabled", count == 1);
     });
     selectors.containerQuestion.append(selectors.flag);
     selectors.containerQuestion.append(selectors.head);

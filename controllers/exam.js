@@ -18,13 +18,15 @@ const Exam = (mcqs) => {
   };
   $(selectors.examContainer).children().remove();
   $(selectors.flags).children().remove();
-  timer(180);
+  let time = timer(10);
   mcqs.forEach((mcq) => {
     new Question(mcq, userAnswers);
   });
   $(selectors.numberOfQuestions).text(mcqs.length);
   //handler
   const onNextHandler = () => {
+    qNumber = $(qustionNumber).text();
+
     if (qNumber < mcqs.length) {
       $(selectors.previous).attr("disabled", false);
       qNumber++;
@@ -37,6 +39,7 @@ const Exam = (mcqs) => {
     $(selectors.qustionNumber).text(qNumber);
   };
   const onPreviousHandler = () => {
+    qNumber = $(qustionNumber).text();
     if (qNumber > 1) {
       $(selectors.next).attr("disabled", false);
       qNumber--;
@@ -56,6 +59,7 @@ const Exam = (mcqs) => {
     );
     let percentage = (grade / mcqs.length).toFixed(4) * 100;
     localStorage.setItem("grade", percentage);
+    clearInterval(time);
     Result();
     goTo("_result");
   };

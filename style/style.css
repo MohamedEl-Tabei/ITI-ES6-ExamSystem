@@ -330,7 +330,6 @@ h3 div img {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -370,5 +369,55 @@ h3 div img {
   }
   .myh-fm {
     height: max-content !important;
+  }
+  h4 {
+    font-size: medium;
+  }
+  .option-h {
+    height: 80px;
+    font-size: small;
+  }
+  .rounded-5 {
+    border-radius: 0px !important;
+  }
+  .time {
+    width: 120px !important;
+  }
+}
+.option-h {
+  height: 100px;
+  box-sizing: border-box;
+  text-align: center;
+}
+h4 {
+  height: 40px;
+}
+/* HTML: <div class="loader"></div> */
+.time {
+  width: 200px;
+  opacity: 0.8;
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  background-image: url("../images/time.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: l9 1s infinite;
+}
+
+@keyframes l9 {
+  0%,
+  70%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  75%,
+  85%,
+  95% {
+    transform: translateY(-3px) rotate(10deg);
+  }
+  80%,
+  90% {
+    transform: translateY(-3px) rotate(-10deg);
   }
 }
