@@ -23,10 +23,13 @@ const Result = () => {
     background: `conic-gradient(#00800057  0% ${grade}%,#ff000066 ${grade}% 100%)`,
   });
 
-  selectors.toReadyf.addEventListener("click", function () {
-    localStorage.setItem("grade", "");
-
-    goTo("_ready");
-  });
+  selectors.toReadyf.addEventListener(
+    "click",
+    function () {
+      localStorage.setItem("grade", "");
+      goTo("_ready");
+    },
+    { once: true }
+  );
 };
 export default Result;
