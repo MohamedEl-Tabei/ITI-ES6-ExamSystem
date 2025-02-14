@@ -18,6 +18,8 @@ const Exam = (mcqs) => {
   };
   $(selectors.examContainer).children().remove();
   $(selectors.flags).children().remove();
+  $(selectors.previous).attr("disabled", true);
+  $(selectors.next).attr("disabled", false);
   let time = timer(180);
   mcqs.forEach((mcq) => {
     new Question(mcq, userAnswers);
@@ -66,8 +68,8 @@ const Exam = (mcqs) => {
   };
 
   $(selectors.loader).addClass("d-none");
-  $(selectors.submitTest).on("click", onSubmit);
-  $(selectors.next).on("click", onNextHandler);
-  $(selectors.previous).on("click", onPreviousHandler);
+  $(selectors.submitTest).off("click").on("click", onSubmit);
+  $(selectors.next).off("click").on("click", onNextHandler);
+  $(selectors.previous).off("click").on("click", onPreviousHandler);
 };
 export default Exam;

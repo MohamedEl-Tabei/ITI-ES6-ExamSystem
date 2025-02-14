@@ -6,10 +6,12 @@ const TimeOut = () => {
   $("#messagetimeOut").html(
     `Sorry <span class="text-capitalize">${firstName} ${lastName}</span>, Timeout!!`
   );
-  $("#toReady6").on("click", function () {
-    localStorage.setItem("grade", "");
-    goTo("_ready");
-  });
+  $("#toReady6")
+    .off("click")
+    .on("click", function () {
+      localStorage.setItem("grade", "");
+      goTo("_ready");
+    });
 };
 
 export default TimeOut;
